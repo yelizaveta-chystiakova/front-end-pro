@@ -1,4 +1,3 @@
-
 //1
 function maxNumber(a, b) {
     if (a > b) {

@@ -1,0 +1,53 @@
+// Привіт
+
+// Тобі потрібно створити counter, який буде вміти збільшувати, зменьшувати та скидати значення.
+
+// Як посилання, можете використовувати код за нашего заняття. І спробуйте зробити через делегуваггя подій
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>counter</h1>
+    <span id="value">0</span>
+    <div class>
+        <button id="increment" class="btn">Збільшити</button>
+        <button id="decrement" class="btn">Зменшити</button>
+        <button id="reset" class="btn">Скинути</button>
+    </div>
+</body>
+<script>
+    const value = document.getElementById('value');
+    const btns = document.querySelectorAll('.btn');
+    let count = 0;
+
+    const handleBtnClick = (event) => {
+        const buttonId = event.target.id;
+
+        switch (buttonId) {
+            case "decrement":
+                count -= 1;
+                break;
+            case "increment":
+                count += 1;
+                break;
+            case "reset":
+                count = 0;
+                break;
+            default:
+                count;
+        }
+        value.innerHTML = count;
+    }
+
+    btns.forEach(btn => {
+        btn.addEventListener("click", handleBtnClick)
+    });
+</script>
+
+</html>
